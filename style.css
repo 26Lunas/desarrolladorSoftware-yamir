@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    /* padding: 0;
+    box-sizing: content-box;
+    margin: 0; */
+}
+body{
+    overflow-x: hidden;
+    /* border: solid 3px red; */
+    background: var(--colorBlanco);
+}
+:root{
+    --colorTitle: rgba(255, 0, 76, 0.863);
+    --colorBlanco: #fff;
+    --colorAzulOscuro: #040530f8;
+}
+.navbar a:hover{
+    color: var(--colorTitle) !important;
+}
+.activado{
+    color: var(--colorTitle) !important;
+}
+.disabled{
+    color: rgb(53, 53, 105) !important;
+}
+.navbar-toggler-icon{
+    color: var(--colorBlanco) !important;
+}
+
+
+.contenedor-portada{
+    width: 100%;
+    height: 100vh;
+    /* border: solid red 3px; */
+    
+    background: url('img/img-portada.jpg') no-repeat;
+    background-size: cover;
+    background-origin: content-box;
+}
+.contenedor-portada, .text-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-title{
+    color: var(--colorBlanco);
+    /* border: solid 3px red; */
+    flex-direction: column;
+}
+.text-title h1{
+    text-align: center;
+}
+.nombreTitle{
+    color: var(--colorTitle);
+}
+.btn-miWork:focus{
+    outline: none !important;
+    box-shadow: none !important;
+    border: solid 2px var(--colorBlanco);
+}
+.btn-miWork{
+    transition: .5s;
+    width: 11em;
+    border: solid 2px var(--colorBlanco);
+    background: none;
+    padding: 1% 3%;
+    font-size: 20px;
+    color: var(--colorBlanco);
+    border-radius: 18px;
+}
+.btn-miWork-hover{
+    transition: .8s;
+    background: var(--colorTitle);
+    border:solid 2px var(--colorTitle);
+}
+.rotar{
+    transition: 1s;
+    rotate: 90deg;
+}
+.icono-flecha{
+    margin-left: 8%;
+    transition: .5s;
+}
+
+/* about */
+.about{
+    /* border: solid 3px red; */
+    /* scroll-behavior: smooth; */
+    width: 100%;
+    background: var(--colorBlanco);
+    padding-bottom: 7%;
+}
+
+/* navbar */
+.navbar{
+    background: var(--colorAzulOscuro) !important;
+    box-shadow: var(--colorTitle) 1px 5px 10px;
+    padding-left: 4% !important;
+}
+.nav-item a{
+    color: var(--colorBlanco);
+}
+/* Fin navbar */
+
+.cont-aboutme, .cont-beneficios, .beneficio, .cont-info-aboutme, .info-aboutme{
+    display: flex;
+    align-items: center;
+}
+.cont-aboutme{
+    width: 100%;
+    /* border: solid red 3px; */
+    flex-direction: column;
+    padding-top: 5%;
+    
+}
+.cont-aboutme h2{
+    border-bottom: solid rgb(54, 54, 54);
+    padding-bottom: 1%;
+    margin-bottom: 5%;
+}
+.cont-beneficios{
+    /* border: solid rgb(21, 97, 55) 3px; */
+    width: 85%;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 4%;
+}
+.beneficio{
+    /* border: solid red 3px; */
+    width: 250px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.beneficio svg{
+    border-radius: 18px;
+    width: 70px;
+    height: 70px;
+    background: var(--colorTitle);
+    padding: 3%;
+    fill: var(--colorBlanco);
+    margin-bottom: 4%;
+    box-shadow: var(--colorAzulOscuro) 1px 5px 10px;
+}
+
+.beneficio svg:hover{
+    box-shadow: var(--colorAzulOscuro) 1px 5px 15px;
+}
+
+.beneficio i{
+    margin-bottom: 4%;
+    border-radius: 18px;
+    width: 70px;
+    height: 70px;
+    background: var(--colorTitle);
+    padding: 3%;
+    color: var(--colorBlanco);
+    font-size: 55px;
+    box-shadow: var(--colorAzulOscuro) 1px 5px 10px;
+}
+
+.beneficio i:hover{
+    box-shadow: var(--colorAzulOscuro) 1px 5px 15px;
+}
+
+
+.cont-info-aboutme{
+    /* border: solid red 3px; */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 85%;
+}
+.info-aboutme{
+    width: 40%;
+    flex-direction: column;
+    text-align: center;
+}
+.info-aboutme img{
+    width: 300px;
+    border-radius: 18px;
+    box-shadow: var(--colorAzulOscuro) 1px 5px 10px;
+    margin-bottom: 5%;
+}
+/* Skill */
+.skill{
+    /* border: solid 3px blue; */
+    width: 50%;
+    height: 90%;
+}
+.cont-interno{
+    width: 100%;
+    padding: 2%;
+    border-radius: 18px;
+    
+}
+
+.cont-interno:hover{
+    box-shadow: var(--colorAzulOscuro) 1px 5px 10px;
+}
+
+.cont-interno h3{
+    text-align: center;
+}
+.cont-skills:not(:last-child){
+    margin-bottom: 25px;
+}
+.detalles{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.menu-skill{
+    position: relative;
+    border: solid 1px var(--colorTitle);
+    border-radius: 20px;
+}
+.menu-skill div{
+    position: relative;
+    width: 0;
+    height: 8px;
+    border-radius: 10px;
+    background: var(--colorTitle);
+}
+
+/* animation */
+#html-menu{
+    animation: html-barra 4s forwards;
+}
+@keyframes html-barra {
+    100%{
+        width: 90%;
+    }
+}
+
+
+#css-menu{
+    animation: css-barra 4s forwards;
+}
+@keyframes css-barra {
+    100%{
+        width: 75%;
+    }
+}
+
+
+#js-menu{
+    animation: js-barra 4s forwards;
+}
+@keyframes js-barra {
+    100%{
+        width: 60%;
+    }
+}
+
+
+#php-menu{
+    animation: php-barra 4s forwards;
+}
+@keyframes php-barra {
+    100%{
+        width: 65%;
+    }
+}
+
+
+#py-menu{
+    animation: py-barra 4s forwards;
+}
+@keyframes py-barra {
+    100%{
+        width: 60%;
+    }
+}
+
+#java-menu{
+    animation: java-barra 4s forwards;
+}
+@keyframes java-barra {
+    100%{
+        width: 60%;
+    }
+}
+
+#angular-menu{
+    animation: angular-barra 4s forwards;
+}
+@keyframes angular-barra {
+    100%{
+        width: 20%;
+    }
+}
+
+#ajax-menu{
+    animation: ajax-barra 4s forwards;
+}
+@keyframes ajax-barra {
+    100%{
+        width: 85%;
+    }
+}
+
+/* end animation */
+
+
+/* Fin Skill */
+
+
+/* Fin about */
+
+/* start project portfolio */
+.portafolio{
+    width: 100vw;
+    height: 100vh;
+}
+/* End project portfolio */
