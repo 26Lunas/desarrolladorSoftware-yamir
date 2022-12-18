@@ -10,6 +10,12 @@
     <!-- Bootstrap 5.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
+    <!-- CDN CSS AOS animente on scroll library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- magnific-popup css cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Desarrollador Web-Yamir Serret-Barranquilla</title>
 </head>
 <body>
@@ -56,28 +62,28 @@
 
           <div class="cont-aboutme">
 
-            <h2>SOBRE MI</h2>
+            <h2 class="subTitle" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">SOBRE MI</h2>
             <div class="cont-beneficios">
-              <div class="beneficio benefico-1">
-                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 128 128"><path class="cls-1" d="M106.98929,41.91644c-2.44581-2.028-4.68786-.712-6.16139.45546C93.20426,48.4096,86.782,53.14082,79.89811,58.35221,72.32216,64.08763,64.488,70.01865,56.07861,76.74553c-6.39391,5.11455-7.88014,12.12717-4.07875,19.24,1.06266,2.3214,3.55641,4.37959,6.84458,5.64816a14.19745,14.19745,0,0,0,5.13205,1.00057c4.56513,0,8.77548-2.45564,12.00228-7.1411,6.46007-9.381,11.91934-17.6315,17.6991-26.36671,4.51071-6.817,8.47925-13.20849,13.63935-20.80625C108.96047,45.90074,108.83486,43.447,106.98929,41.91644Z"/><path class="cls-2" d="M64.00244,38.07609a49.13226,49.13226,0,0,1,18.55737,5.44938c.84934.44674,1.68882.923,2.50379,1.42373.82968-.653,1.65937-1.31082,2.48413-1.96374q5.037-3.99134,10.0789-7.97282a62.61957,62.61957,0,0,0-9.11177-4.69823c-.60876-.2553-1.22243-.50568-1.841-.74132A63.01419,63.01419,0,0,0,1.02029,88.343H6.66605a56.291,56.291,0,0,1,5.98942-21.26243A54.66146,54.66146,0,0,1,25.95983,50.30038,52.82753,52.82753,0,0,1,44.09008,40.26073,51.036,51.036,0,0,1,64.00244,38.07609Z"/><path class="cls-2" d="M126.97971,88.343q0-.61118-.01474-1.22243a4.46871,4.46871,0,0,0,.00983-.51548c-.09819-2.44485-.25038-4.90444-.58913-7.32967a62.08046,62.08046,0,0,0-11.63519-28.46937l-4.59515,6.77q-3.07816,4.53623-6.19561,9.13139a44.62758,44.62758,0,0,1,1.60046,4.42825A44.163,44.163,0,0,1,107.2048,88.343Z"/></svg>
+              <div class="beneficio benefico-1" data-aos-duration="900" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <svg xmlns="http://www.w3.org/2000/svg" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000" id="Layer_1" data-name="Layer 1" viewBox="0 0 128 128"><path class="cls-1" d="M106.98929,41.91644c-2.44581-2.028-4.68786-.712-6.16139.45546C93.20426,48.4096,86.782,53.14082,79.89811,58.35221,72.32216,64.08763,64.488,70.01865,56.07861,76.74553c-6.39391,5.11455-7.88014,12.12717-4.07875,19.24,1.06266,2.3214,3.55641,4.37959,6.84458,5.64816a14.19745,14.19745,0,0,0,5.13205,1.00057c4.56513,0,8.77548-2.45564,12.00228-7.1411,6.46007-9.381,11.91934-17.6315,17.6991-26.36671,4.51071-6.817,8.47925-13.20849,13.63935-20.80625C108.96047,45.90074,108.83486,43.447,106.98929,41.91644Z"/><path class="cls-2" d="M64.00244,38.07609a49.13226,49.13226,0,0,1,18.55737,5.44938c.84934.44674,1.68882.923,2.50379,1.42373.82968-.653,1.65937-1.31082,2.48413-1.96374q5.037-3.99134,10.0789-7.97282a62.61957,62.61957,0,0,0-9.11177-4.69823c-.60876-.2553-1.22243-.50568-1.841-.74132A63.01419,63.01419,0,0,0,1.02029,88.343H6.66605a56.291,56.291,0,0,1,5.98942-21.26243A54.66146,54.66146,0,0,1,25.95983,50.30038,52.82753,52.82753,0,0,1,44.09008,40.26073,51.036,51.036,0,0,1,64.00244,38.07609Z"/><path class="cls-2" d="M126.97971,88.343q0-.61118-.01474-1.22243a4.46871,4.46871,0,0,0,.00983-.51548c-.09819-2.44485-.25038-4.90444-.58913-7.32967a62.08046,62.08046,0,0,0-11.63519-28.46937l-4.59515,6.77q-3.07816,4.53623-6.19561,9.13139a44.62758,44.62758,0,0,1,1.60046,4.42825A44.163,44.163,0,0,1,107.2048,88.343Z"/></svg>
                 <h3>Rapido</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis magni earum quas possimus.</p>
               </div>
 
-              <div class="beneficio benefico-2">
-                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 128 128"><path class="cls-1" d="M87.39767,9.92413A12.68383,12.68383,0,0,0,78.09687,6.0564h-62.609A12.68686,12.68686,0,0,0,6.187,9.92413a12.688,12.688,0,0,0-3.86772,9.3027v89.54973a12.67955,12.67955,0,0,0,3.86772,9.2989,12.67952,12.67952,0,0,0,9.30079,3.86772H73.20843a12.49054,12.49054,0,0,1-3.59158-8.859v-9.62454h-54.129A5.25386,5.25386,0,0,1,10.27,98.23984v-79.013A5.25054,5.25054,0,0,1,15.48784,14.007h62.609a5.25384,5.25384,0,0,1,5.21979,5.21981V40.066h7.95062V19.22683A12.69721,12.69721,0,0,0,87.39767,9.92413Zm-44.31022,99.399a5.16693,5.16693,0,1,1-1.56346,3.70395A5.07149,5.07149,0,0,1,43.08746,109.32311Z"/><path class="cls-2" d="M123.0772,46.57227a8.53238,8.53238,0,0,0-6.258-2.60268H82.38123a8.88625,8.88625,0,0,0-8.86092,8.86092v60.25334a8.88525,8.88525,0,0,0,8.86092,8.85975H116.819a8.88655,8.88655,0,0,0,8.86169-8.85975V52.8307A8.54067,8.54067,0,0,0,123.0772,46.57227ZM102.09242,118.4355a3.47537,3.47537,0,1,1,1.05286-2.49192A3.406,3.406,0,0,1,102.09242,118.4355Zm18.23868-12.441A3.5353,3.5353,0,0,1,116.819,109.507H82.38125a3.53606,3.53606,0,0,1-3.51185-3.51249V52.83074a3.53644,3.53644,0,0,1,3.51185-3.51206H116.819a3.53551,3.53551,0,0,1,3.51206,3.51206Z"/></svg>
+              <div class="beneficio benefico-2" data-aos-duration="1000" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <svg xmlns="http://www.w3.org/2000/svg" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000" id="Layer_1" data-name="Layer 1" viewBox="0 0 128 128"><path class="cls-1" d="M87.39767,9.92413A12.68383,12.68383,0,0,0,78.09687,6.0564h-62.609A12.68686,12.68686,0,0,0,6.187,9.92413a12.688,12.688,0,0,0-3.86772,9.3027v89.54973a12.67955,12.67955,0,0,0,3.86772,9.2989,12.67952,12.67952,0,0,0,9.30079,3.86772H73.20843a12.49054,12.49054,0,0,1-3.59158-8.859v-9.62454h-54.129A5.25386,5.25386,0,0,1,10.27,98.23984v-79.013A5.25054,5.25054,0,0,1,15.48784,14.007h62.609a5.25384,5.25384,0,0,1,5.21979,5.21981V40.066h7.95062V19.22683A12.69721,12.69721,0,0,0,87.39767,9.92413Zm-44.31022,99.399a5.16693,5.16693,0,1,1-1.56346,3.70395A5.07149,5.07149,0,0,1,43.08746,109.32311Z"/><path class="cls-2" d="M123.0772,46.57227a8.53238,8.53238,0,0,0-6.258-2.60268H82.38123a8.88625,8.88625,0,0,0-8.86092,8.86092v60.25334a8.88525,8.88525,0,0,0,8.86092,8.85975H116.819a8.88655,8.88655,0,0,0,8.86169-8.85975V52.8307A8.54067,8.54067,0,0,0,123.0772,46.57227ZM102.09242,118.4355a3.47537,3.47537,0,1,1,1.05286-2.49192A3.406,3.406,0,0,1,102.09242,118.4355Zm18.23868-12.441A3.5353,3.5353,0,0,1,116.819,109.507H82.38125a3.53606,3.53606,0,0,1-3.51185-3.51249V52.83074a3.53644,3.53644,0,0,1,3.51185-3.51206H116.819a3.53551,3.53551,0,0,1,3.51206,3.51206Z"/></svg>
                 <h3>Adaptable</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis magni earum quas possimus.</p>
               </div>
 
-              <div class="beneficio benefico-3">
-                <i class="fa-regular fa-lightbulb"></i>
+              <div class="beneficio benefico-3" data-aos-duration="1200" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <i class="fa-regular fa-lightbulb" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000"></i>
                 <h3>Intuitivo</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis magni earum quas possimus.</p>
               </div>
 
-              <div class="beneficio benefico-4">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g id="Start_Up" data-name="Start Up"><path d="M7.34,11.89a6.6,6.6,0,0,1,2.28-1.5,42.5,42.5,0,0,0-2.28,5.03,1.587,1.587,0,0,0-.2.07.937.937,0,0,1-.37.07.984.984,0,0,1-.7-.29,1.01,1.01,0,0,1-.23-1.07A6.87,6.87,0,0,1,7.34,11.89Z"/><path d="M21.6,22.39a6.653,6.653,0,0,1-3.8,3.77,1.149,1.149,0,0,1-.36.07,1.017,1.017,0,0,1-.71-.3.988.988,0,0,1-.22-1.07c.02-.06.05-.13.07-.19A42.415,42.415,0,0,0,21.6,22.39Z"/><path d="M25.768,6.231a9.554,9.554,0,0,0,3.206,2.11A12.046,12.046,0,0,0,28.793,5.6,3.009,3.009,0,0,0,26.4,3.207,11.628,11.628,0,0,0,24.178,3c-.169,0-.345,0-.524.011A9.543,9.543,0,0,0,25.768,6.231Z"/><circle cx="20" cy="12" r="2"/><path d="M28.54,10.328a11.527,11.527,0,0,1-4.186-2.682,11.549,11.549,0,0,1-2.689-4.2L21.6,3.261a14.281,14.281,0,0,0-7.33,4.078c-2.816,2.816-4.515,7.334-5.53,10.034-.128.342-.243.649-.347.914A3,3,0,0,0,9.06,21.5L10.5,22.939a3,3,0,0,0,3.216.67c.266-.1.575-.22.917-.349,2.7-1.015,7.216-2.712,10.031-5.528A14.293,14.293,0,0,0,28.725,10.4ZM20,16a4,4,0,1,1,4-4A4,4,0,0,1,20,16Z"/><path d="M8.707,23.293a1,1,0,0,0-1.414,0L4.1,26.482A1,1,0,1,0,5.518,27.9l3.189-3.189A1,1,0,0,0,8.707,23.293Z"/><path d="M4.707,23.843l2.068-2.068a1,1,0,1,0-1.414-1.414L3.293,22.429a1,1,0,1,0,1.414,1.414Z"/><path d="M10.225,25.225,8.157,27.293a1,1,0,1,0,1.414,1.414l2.068-2.068a1,1,0,0,0-1.414-1.414Z"/></g></svg>
+              <div class="beneficio benefico-4" data-aos-duration="1200" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <svg xmlns="http://www.w3.org/2000/svg" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000" viewBox="0 0 32 32"><g id="Start_Up" data-name="Start Up"><path d="M7.34,11.89a6.6,6.6,0,0,1,2.28-1.5,42.5,42.5,0,0,0-2.28,5.03,1.587,1.587,0,0,0-.2.07.937.937,0,0,1-.37.07.984.984,0,0,1-.7-.29,1.01,1.01,0,0,1-.23-1.07A6.87,6.87,0,0,1,7.34,11.89Z"/><path d="M21.6,22.39a6.653,6.653,0,0,1-3.8,3.77,1.149,1.149,0,0,1-.36.07,1.017,1.017,0,0,1-.71-.3.988.988,0,0,1-.22-1.07c.02-.06.05-.13.07-.19A42.415,42.415,0,0,0,21.6,22.39Z"/><path d="M25.768,6.231a9.554,9.554,0,0,0,3.206,2.11A12.046,12.046,0,0,0,28.793,5.6,3.009,3.009,0,0,0,26.4,3.207,11.628,11.628,0,0,0,24.178,3c-.169,0-.345,0-.524.011A9.543,9.543,0,0,0,25.768,6.231Z"/><circle cx="20" cy="12" r="2"/><path d="M28.54,10.328a11.527,11.527,0,0,1-4.186-2.682,11.549,11.549,0,0,1-2.689-4.2L21.6,3.261a14.281,14.281,0,0,0-7.33,4.078c-2.816,2.816-4.515,7.334-5.53,10.034-.128.342-.243.649-.347.914A3,3,0,0,0,9.06,21.5L10.5,22.939a3,3,0,0,0,3.216.67c.266-.1.575-.22.917-.349,2.7-1.015,7.216-2.712,10.031-5.528A14.293,14.293,0,0,0,28.725,10.4ZM20,16a4,4,0,1,1,4-4A4,4,0,0,1,20,16Z"/><path d="M8.707,23.293a1,1,0,0,0-1.414,0L4.1,26.482A1,1,0,1,0,5.518,27.9l3.189-3.189A1,1,0,0,0,8.707,23.293Z"/><path d="M4.707,23.843l2.068-2.068a1,1,0,1,0-1.414-1.414L3.293,22.429a1,1,0,1,0,1.414,1.414Z"/><path d="M10.225,25.225,8.157,27.293a1,1,0,1,0,1.414,1.414l2.068-2.068a1,1,0,0,0-1.414-1.414Z"/></g></svg>
                 <h3>Dinamico</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis magni earum quas possimus.</p>
               </div>
@@ -85,12 +91,12 @@
             </div>
 
             <div class="cont-info-aboutme">
-              <div class="info-aboutme">
+              <div class="info-aboutme" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 <img src="img/img-perfil.jpg" alt="perfil">
                 <h3>Yamir Serret</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere aperiam nisi a nihil ipsum aliquid.</p>
               </div>
-              <div class="skill">
+              <div class="skill" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 <div class="cont-interno">
                   <h3>Habilidades</h3>
 
@@ -190,15 +196,76 @@
     </section>
     <!-- Fin Apartado sobre mi -->
 
-    <section class="portafolio" id="portafolio">
-      <h2>Portafolio</h2>
-    </section>
+   
 
     <!-- Inicio portafolio de proyectos -->
 
+    <section class="portafolio" id="portafolio">
+      <h2 class="subTitle" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">PORTAFOLIO</h2>
+        
+      <div class="gallery">
+        <ul class="controls">
+          <li class="buttons active" data-filter="all">Todo</li>
+          <li class="buttons" data-filter="filter-1">filter-1</li>
+          <li class="buttons" data-filter="filter-2">filter-2</li>
+          <li class="buttons" data-filter="filter-3">filter-3</li>
+          <li class="buttons" data-filter="filter-4">filter-4</li>
+        </ul>
 
+        <div class="img-container">
+          <a href="img/img-perfil.jpg" class="image filter-1" data-aos="fade-up" data-aos-duration="1000">
+            <img src="img/img-perfil.jpg" alt="">
+          </a>
+          <a href="img/img-perfil.jpg" class="image filter-1" data-aos="fade-up" data-aos-duration="1000">
+            <img src="img/img-perfil.jpg" alt="">
+          </a>
+          <a href="img/img-perfil.jpg" class="image filter-1" data-aos="fade-up" data-aos-duration="1000">
+            <img src="img/img-perfil.jpg" alt="">
+          </a>
+
+          <a href="img/img-numero1.jpg" class="image filter-2" data-aos="fade-up" data-aos-duration="1000">
+            <img src="img/img-numero1.jpg" alt="">
+          </a>
+          <a href="img/img-numero1.jpg" class="image filter-2" data-aos="fade-up" data-aos-duration="1000">
+            <img src="img/img-numero1.jpg" alt="">
+          </a>
+
+          <a href="img/img-numero2.jpg" class="image filter-2" data-aos="fade-up" data-aos-duration="1000">
+            <img src="img/img-numero2.jpg" alt="">
+          </a>
+          <a href="img/img-numero2.jpg" class="image filter-2" data-aos="fade-up" data-aos-duration="1000">
+            <img src="img/img-numero2.jpg" alt="">
+          </a>
+
+
+        </div>
+
+      </div>
+
+      <svg class="efecto-ola" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 490" version="1.1"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="#040530f8" offset="0%"/><stop stop-color="rgba(0, 13.053, 152.865, 1)" offset="100%"/></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,98L26.7,106.2C53.3,114,107,131,160,138.8C213.3,147,267,147,320,163.3C373.3,180,427,212,480,261.3C533.3,310,587,376,640,400.2C693.3,425,747,408,800,383.8C853.3,359,907,327,960,302.2C1013.3,278,1067,261,1120,277.7C1173.3,294,1227,343,1280,367.5C1333.3,392,1387,392,1440,334.8C1493.3,278,1547,163,1600,163.3C1653.3,163,1707,278,1760,277.7C1813.3,278,1867,163,1920,122.5C1973.3,82,2027,114,2080,163.3C2133.3,212,2187,278,2240,318.5C2293.3,359,2347,376,2400,383.8C2453.3,392,2507,392,2560,343C2613.3,294,2667,196,2720,155.2C2773.3,114,2827,131,2880,163.3C2933.3,196,2987,245,3040,228.7C3093.3,212,3147,131,3200,138.8C3253.3,147,3307,245,3360,285.8C3413.3,327,3467,310,3520,326.7C3573.3,343,3627,392,3680,400.2C3733.3,408,3787,376,3813,359.3L3840,343L3840,490L3813.3,490C3786.7,490,3733,490,3680,490C3626.7,490,3573,490,3520,490C3466.7,490,3413,490,3360,490C3306.7,490,3253,490,3200,490C3146.7,490,3093,490,3040,490C2986.7,490,2933,490,2880,490C2826.7,490,2773,490,2720,490C2666.7,490,2613,490,2560,490C2506.7,490,2453,490,2400,490C2346.7,490,2293,490,2240,490C2186.7,490,2133,490,2080,490C2026.7,490,1973,490,1920,490C1866.7,490,1813,490,1760,490C1706.7,490,1653,490,1600,490C1546.7,490,1493,490,1440,490C1386.7,490,1333,490,1280,490C1226.7,490,1173,490,1120,490C1066.7,490,1013,490,960,490C906.7,490,853,490,800,490C746.7,490,693,490,640,490C586.7,490,533,490,480,490C426.7,490,373,490,320,490C266.7,490,213,490,160,490C106.7,490,53,490,27,490L0,490Z"/></svg>
+    </section>
 
     <!-- Fin portafolio de proyectos -->
+
+    
+    <!-- Inicio contacto -->
+    <section class="contacto">
+      <h2 class="subTitle">CONTACTO</h2>
+      <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, deleniti!</P>
+
+      <form action="#" class="form-contacto">
+        <input type="text" placeholder="Nombre">
+        <input type="email" name="" id="" placeholder="Ingrese su email">
+        <textarea name="" id="" cols="30" rows="10" placeholder="Escribe tu mensaje"></textarea>
+        <button type="submit">ENVIAR</button>
+      </form>
+
+    </section>
+    <!-- Fin Contacto -->
+
+    <footer class="pie-pagina">
+      <p>YAMIR SERRET <span>&copy;2022</span></p>
+    </footer>
 
 
     <!-- JS Bootstrap 5.2 -->
@@ -210,7 +277,17 @@
 
     <!-- File Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- JS -->
     <script src="js/app.js"></script>
+
+    <!-- CDN JS AOS animente on scroll library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
 </body>
 </html>
