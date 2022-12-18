@@ -10,6 +10,31 @@ $(function() {
         contTitle.classList.toggle('btn-miWork-hover');
 
     })
+
+    $('.buttons').click(function(){
+
+      $(this).addClass('active').siblings().removeClass('active');
+      
+      let filter = $(this).attr('data-filter');
+
+      if(filter == 'all'){
+        $('.image').show(400);
+      }else{
+        $('.image').not('.'+filter).hide(200);
+        $('.image').filter('.'+filter).show(400);
+      }
+      console.log(filter)
+    })
+
+    $('.gallery').magnificPopup({
+
+      delegate: 'a',
+      type: 'image',
+      gallery:{
+        enabled: true
+      }
+
+    })
    
 })
 
