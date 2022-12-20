@@ -6,10 +6,12 @@
     box-sizing: border-box;
     margin: 0;
 }
+
 body{
-    overflow-x: hidden;
+    overflow: hidden;
     /* border: solid 3px red; */
     background: var(--colorPortafolio);
+    overflow-y: scroll;
 }
 :root{
     --colorTitle: rgba(255, 0, 76, 0.863);
@@ -336,7 +338,7 @@ body{
 /* start project portfolio */
 .portafolio{
     /* border: solid 3px red; */
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     background: var(--colorPortafolio);
     display: flex;
@@ -408,14 +410,14 @@ body{
 /* End project portfolio */
 
 .efecto-ola{
-    width: 100vw;
+    width: 100%;
     /* border: solid 3px red; */
     background: var(--colorPortafolio);
 }
 
 /* Inicio contacto */
 .contacto{
-    width: 100vw;
+    width: 100%;
     height: 80vh;
     background: var(--colorAzulOscuro);
     display: flex;
@@ -475,7 +477,7 @@ body{
 
 /* pie de pagina */
 .pie-pagina{
-    width: 100vw;
+    width: 100%;
     height: 15vh;
     background:  rgb(0, 1, 27);
     display: flex;
