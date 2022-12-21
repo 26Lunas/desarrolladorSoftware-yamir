@@ -1,7 +1,49 @@
+
 $(function() {
     console.log("Jquery esta funcionando");
-    
-    $('.btn-miWork').hover(function () {
+  
+  // Funcion de efecto scroll
+
+    $(window).scroll(function(){
+      // console.log($(this).scrollTop())
+      
+
+      let navbar = document.getElementById('navbarScroll');
+      let opAboutme = document.getElementById('op-aboutme');
+      let opPortafolio = document.getElementById('op-portafolio');
+      let opContacto = document.getElementById('op-contacto');
+      
+
+      navbar.classList.toggle('navbarScroll',$(this).scrollTop() > 846);
+
+      let opHome = document.getElementById('op-home');
+      if($(this).scrollTop() > 0 && $(this).scrollTop() < 846){
+
+        opPortafolio.classList.remove('activado');
+        opHome.classList.add('activado');
+        opAboutme.classList.remove('activado');
+        opContacto.classList.remove('activado');
+      }else if($(this).scrollTop() > 845 && $(this).scrollTop() < 2000){
+        opPortafolio.classList.remove('activado');
+        opHome.classList.remove('activado');
+        opAboutme.classList.add('activado');
+        opContacto.classList.remove('activado');
+
+      }else if($(this).scrollTop() > 2156 && $(this).scrollTop() < 3591){
+        opAboutme.classList.remove('activado');
+        
+        opPortafolio.classList.add('activado');
+        opContacto.classList.remove('activado');
+
+      }else if($(this).scrollTop() > 3591 && $(this).scrollTop() < 3893){
+        opPortafolio.classList.remove('activado');
+        opContacto.classList.add('activado');
+      }
+      
+     
+    })
+
+    $('.btn-miWork').click(function () {
 
         let iconoFlecha = document.getElementById('iconoFlecha');
         iconoFlecha.classList.toggle('rotar');
