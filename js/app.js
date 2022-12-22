@@ -43,7 +43,7 @@ $(function() {
      
     })
 
-    $('.btn-miWork').click(function () {
+    $('.btn-miWork').hover(function () {
 
         let iconoFlecha = document.getElementById('iconoFlecha');
         iconoFlecha.classList.toggle('rotar');
