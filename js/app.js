@@ -9,38 +9,43 @@ $(function() {
       
 
       let navbar = document.getElementById('navbarScroll');
-      let opAboutme = document.getElementById('op-aboutme');
-      let opPortafolio = document.getElementById('op-portafolio');
-      let opContacto = document.getElementById('op-contacto');
+      
       
 
-      navbar.classList.toggle('navbarScroll',$(this).scrollTop() > 846);
-
-      let opHome = document.getElementById('op-home');
-      if($(this).scrollTop() > 0 && $(this).scrollTop() < 846){
-
-        opPortafolio.classList.remove('activado');
-        opHome.classList.add('activado');
-        opAboutme.classList.remove('activado');
-        opContacto.classList.remove('activado');
-      }else if($(this).scrollTop() > 845 && $(this).scrollTop() < 2000){
-        opPortafolio.classList.remove('activado');
-        opHome.classList.remove('activado');
-        opAboutme.classList.add('activado');
-        opContacto.classList.remove('activado');
-
-      }else if($(this).scrollTop() > 2156 && $(this).scrollTop() < 3591){
-        opAboutme.classList.remove('activado');
-        
-        opPortafolio.classList.add('activado');
-        opContacto.classList.remove('activado');
-
-      }else if($(this).scrollTop() > 3591 && $(this).scrollTop() < 3893){
-        opPortafolio.classList.remove('activado');
-        opContacto.classList.add('activado');
-      }
-      
+      navbar.classList.toggle('navbarScroll',$(this).scrollTop() > 623);
      
+    })
+
+
+    
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.getAttribute('id');
+        // console.log(id);
+        const menuLink = document.querySelectorAll(`.navbar a[href="#${id}"]`);
+        // console.log(menuLink);
+        if(entry.isIntersecting){
+          document.querySelector(".navbar a.activado").classList.remove("activado");
+          // menuLink.classList.add('activado');
+          $(menuLink).addClass('activado')
+        }
+        
+
+      })
+    }, {rootMargin: "-30% 0px -70% 0px" }
+    );
+
+    const navbarLink = document.querySelectorAll('.navbar a[href^="#"]');
+    // console.log(navbarLink);
+    navbarLink.forEach(navbarLink => {
+      const hash = navbarLink.getAttribute("href");
+      // console.log(hash)
+      const target = document.querySelector(hash);
+      // console.log(target)
+      if(target){
+        observer.observe(target);
+      }
     })
 
     $('.btn-miWork').hover(function () {
