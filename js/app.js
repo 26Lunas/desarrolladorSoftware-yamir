@@ -12,7 +12,7 @@ $(function() {
       
       
 
-      navbar.classList.toggle('navbarScroll',$(this).scrollTop() > 623);
+      navbar.classList.toggle('navbarScroll',$(this).scrollTop() > 846);
      
     })
 
