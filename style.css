@@ -130,11 +130,15 @@ body{
     padding-top: 5%;
     
 }
+
 .subTitle{
     border-bottom: solid rgb(54, 54, 54);
     padding-bottom: 1%;
     margin-bottom: 5%;
     text-align: center;
+}
+.cont-aboutme p{
+    color: rgb(80, 79, 79);
 }
 .cont-beneficios{
     /* border: solid rgb(21, 97, 55) 3px; */
@@ -208,6 +212,9 @@ body{
     border-radius: 18px;
     box-shadow: var(--colorAzulOscuro) 1px 5px 10px;
     margin-bottom: 5%;
+}
+.info-aboutme p{
+    text-align: justify;
 }
 
 /* Skill */
