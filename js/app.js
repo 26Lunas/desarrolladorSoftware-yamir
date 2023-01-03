@@ -13,7 +13,8 @@ $(function() {
       
 
       navbar.classList.toggle('navbarScroll',$(this).scrollTop() > 846);
-     
+   
+            
     })
 
 
