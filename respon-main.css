@@ -1,0 +1,167 @@
+
+/*Sesión uno*/
+
+@media (max-width: 741px){
+    .section1 p{
+        width: 95%;
+        margin-left: 4%;
+    }
+}
+
+/*-----------------------------------------------
+
+Sesion dos, Mis habilidades
+-----------------------------------------------
+
+Medidas Horizontales*/
+
+@media (max-width: 999px){
+    .section1 h2 , .section2 h2{
+        font-size: 30px;
+    }
+    .section2 h3{
+        font-size: 17.1px;
+    }
+    .cont-EC{
+        width: 30%;
+    }
+}
+@media (max-width: 927px){
+    .cont-EC{
+        width: 32%;
+    }
+}
+@media (max-width: 695px){
+    .cont-EC{
+        width: 39%;
+    }
+}
+@media (max-width: 562px){
+    .cont-EC{
+        width: 45%;
+        padding: 2%;
+    }
+}
+@media (max-width: 506px){
+    .contenerdo-EC{
+        flex-direction: column;
+        padding: 4% 0 0 0;
+    }
+    .cont-EC{
+        width: 60%;
+        padding: 2%;
+        margin-bottom: 4%;
+    }
+}
+@media (max-width: 396px){
+    .cont-EC{
+        width: 70%;
+    }
+    .section-3-proyectos h2{
+        margin-bottom: 7%;
+    }
+    .contenedor-imagenes-proyectos{
+        margin-top: 7%;
+    }
+}
+@media (max-width: 280px){
+    .section1 h2 , .section2 h2{
+        font-size: 20px;
+    }
+    .section2 h3{
+        font-size: 16px;
+    }
+    .cont-EC{
+        width: 70%;
+    }
+}
+/*-----------------------------------------------*/
+
+/*Sesión de Proyectos*/
+@media (max-width: 410px){
+    .proyecto{
+        margin-bottom: 5%;
+    }
+    .section-3-proyectos p{
+        margin: 0 4%;
+    }
+}
+
+/*-----------------------------------------------*/
+/*Sesión de contacto*/
+
+@media (max-width: 624px){
+    .contenedor-fomulario h4{
+        font-size: 3.5em;
+    }
+
+}
+@media (max-width: 545px){
+    .contenedor-fomulario h4{
+        font-size: 3em;
+    }
+    .formulario{
+        height: 4em;
+    }
+    .contenedor-enviar{
+        font-size: 1.5em;
+    }
+
+}
+@media (max-width: 435px){
+    .contenedor-fomulario h4{
+        font-size: 2.5em;
+    }
+    .formulario{
+        height: 3.1em;
+    }
+
+}
+@media (max-width: 435px){
+    .contenedor-fomulario h4{
+        font-size: 2em;
+    }
+    .formulario{
+        height: 2em;
+    }
+}
+/*-----------------------------------------------*/
+
+/*Sesión pie de pagina*/
+
+@media (max-width: 999px){
+    .text-pie{
+        font-size: 12px;
+    }
+}
+@media (max-width: 951px){
+    .text-pie{
+        font-size: 11.2px;
+    }
+}
+@media (max-width: 707px){
+    .pie-pagina{
+        padding: 2% 0;
+        flex-direction: column;
+    }
+    .text-pie{
+        font-size: 11.2px;
+        width: 100%;
+        text-align: center;
+    }
+    .text-correo{
+        margin-bottom: 2%;
+    }
+    .img-logo-pie-pagina{
+        width: 30%;
+        height: 200%;
+    }
+    .img-footer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .redes-pie{
+        height: 15%;
+    }
+}

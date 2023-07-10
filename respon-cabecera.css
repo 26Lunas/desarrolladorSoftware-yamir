@@ -1,0 +1,90 @@
+
+/*Orientación Horizontal (eje x (width))*/
+@media (max-width: 999px){
+    header{
+        background: url(imagenes/cabecera/marca-de-agua.png) bottom right / 55% no-repeat;
+    }
+    .boton{
+        width: 9%;
+        padding: 13px 0;
+        font-size: 15px;
+    }
+}
+@media (max-width: 886px){
+    header{
+        background: url(imagenes/cabecera/marca-de-agua.png) bottom right / 60% no-repeat;
+    }
+    .imagen-principal{
+        background: none;
+    }
+}
+@media (max-width: 837px){
+    .titulo h1{
+
+        font-size: 2.8em;
+    }
+    header{
+        background: url(imagenes/cabecera/marca-de-agua.png) bottom right / 70% no-repeat;
+    }
+    .boton{
+        width: 8%;
+        padding: 12px 0;
+        font-size: 12px;
+    }
+    .Logo-tipo img{
+        width: 100px;
+        height: 60px;
+    }
+}
+@media (max-width: 758px){
+    .titulo h1{
+        font-size: 2.3em;
+    }
+    header{
+        background: url(imagenes/cabecera/marca-de-agua.png) bottom right / 70% no-repeat;
+    }
+}
+@media (max-width: 627px){
+    .titulo h1{
+        font-size: 2.1em;
+    }
+    header{
+        background: none;
+    }
+    .boton{
+        width: 12%;
+    }
+}
+@media (max-width: 574px){
+    .titulo h1{
+        font-size: 2.1em;
+    }
+    .boton{
+        padding: 10px 0;
+    }
+}
+@media (max-width: 574px){
+    .titulo h1{
+        font-size: 1.9em;
+    }
+    .boton{
+        width: 15%;
+    }
+}
+@media (max-width: 351px){
+    .titulo h1{
+        font-size: 1.5em;
+    }
+    .boton{
+        width: 17%;
+    }
+}
+/*Orientación Vertical (eje y (height))*/
+@media (max-width: 1200px) and (max-height: 560px) {
+    header{
+        background:none;
+    }
+    .imagen-principal{
+        background: none;
+    }
+}
