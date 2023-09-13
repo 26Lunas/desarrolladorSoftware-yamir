@@ -1,8 +1,6 @@
 
 $(function() {
     console.log("Jquery esta funcionando");
-
-    
   
   // Funcion de efecto scroll
 
@@ -13,7 +11,6 @@ $(function() {
     //   navbar.classList.toggle('navbarScroll',$(this).scrollTop() > 846);
             
     // })
-
 
     
     let prevScrollpos = window.pageYOffset;
