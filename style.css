@@ -598,7 +598,7 @@ body{
     color: var(--colorTitle);
 }
 .modal{
-    padding-top: 8%;
+    padding-top: 10vh;
 }
 .cont-anuncio{
     background: #66666628;
