@@ -597,18 +597,18 @@ body{
 .pie-pagina span{
     color: var(--colorTitle);
 }
-.modal{
+
+/* .modal{
+    display: none !important;
     padding-top: 10vh;
-}
-.cont-anuncio{
+} */
+/* .cont-anuncio{
     background: #66666628;
-    /* width: 100% !important;
-    height: 100vh !important; */
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
-}
-.cont-anuncio img{
+} */
+/* .cont-anuncio img{
     width: 550px;
 }
 @media ((min-width: 320px) or (max-width: 320px)) {
@@ -626,4 +626,4 @@ body{
     background: none;
     border: none !important;
     
-}
+} */
