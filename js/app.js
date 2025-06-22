@@ -150,7 +150,7 @@ $(document).ready(function() {
     })
     $("#cont-img-description-6").hover(function(){
       //console.log("hover...");
-      let contDescript = document.getElementById("cont-desciption-6");
+      let contDescript = document.getElementById("cont-description-6");
       contDescript.classList.toggle("desaparecer");
       
     })
