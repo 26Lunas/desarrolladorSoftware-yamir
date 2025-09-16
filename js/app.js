@@ -154,6 +154,12 @@ $(document).ready(function() {
       contDescript.classList.toggle("desaparecer");
       
     })
+    $("#cont-img-description-7").hover(function(){
+      //console.log("hover...");
+      let contDescript = document.getElementById("cont-description-7");
+      contDescript.classList.toggle("desaparecer");
+      
+    })
 })
 
 
