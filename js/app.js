@@ -160,6 +160,12 @@ $(document).ready(function() {
       contDescript.classList.toggle("desaparecer");
       
     })
+    $("#cont-img-description-8").hover(function(){
+      //console.log("hover...");
+      let contDescript = document.getElementById("cont-description-8");
+      contDescript.classList.toggle("desaparecer");
+      
+    })
 })
 
 
