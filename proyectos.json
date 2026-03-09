@@ -1,0 +1,117 @@
+[
+  {
+    "titulo": "Landing Page – Firma Contable",
+    "descripcion": "Desarrollo de una landing page profesional para una firma contable enfocada en servicios de asesoría tributaria, contabilidad empresarial y gestión financiera para negocios.",
+    "imagen": "img/proyecto-web-contables-demo.jpg",
+    "tecnologias": [
+      "HTML",
+      "CSS",
+      "BOOTSTRAP",
+      "JS"
+    ],
+    "url": "https://26lunas.github.io/web-contabilidad/",
+    "categoria": "filter-1"
+  },
+  {
+    "titulo": "Landing Page – Firma Jurídica",
+    "descripcion": "Desarrollo de una landing page profesional para una firma de abogados enfocada en servicios legales corporativos y asesoría jurídica empresarial.",
+    "imagen": "img/proyecto-web-firma-abogados-demo.jpg",
+    "tecnologias": [
+      "HTML",
+      "CSS",
+      "BOOTSTRAP",
+      "JS"
+    ],
+    "url": "https://26lunas.github.io/firma-juridica-demo/",
+    "categoria": "filter-1"
+  },
+  {
+    "titulo": "El Lider - Heladería",
+    "descripcion": "Sitio web diseñado para una heladeria. Permite a los clientes consultar el menú y realizar pedidos directamente por WhatsApp, facilitando las ventas en línea.",
+    "imagen": "img/img-pagina-el-lider-heladeria.jpg",
+    "tecnologias": [
+      "HTML",
+      "CSS",
+      "BOOTSTRAP",
+      "JS"
+    ],
+    "url": "https://26lunas.github.io/El_Lider_Heladeria/",
+    "categoria": "filter-1"
+  },
+  {
+    "titulo": "El Pepíllo - Comidas Rápidas",
+    "descripcion": "Sitio web diseñado para el negocio familiar El Pepíllo. Permite a los clientes consultar el menú y realizar pedidos directamente por WhatsApp, facilitando las ventas en línea.",
+    "imagen": "img/img-pagina-el-pepillo.jpg",
+    "tecnologias": [
+      "HTML",
+      "CSS",
+      "BOOTSTRAP",
+      "JS"
+    ],
+    "url": "https://26lunas.github.io/El_Pepillo_Comidas_Rapidas/",
+    "categoria": "filter-1"
+  },
+  {
+    "titulo": "Farmacia online",
+    "descripcion": "E-commerce desarrollado para la empresa Alabamedic, cuando laboré para la Agencia Prestige57.",
+    "imagen": "img/img-alabamedic.png",
+    "tecnologias": [
+      "WordPress",
+      "CSS",
+      "ELEMENTOR"
+    ],
+    "url": "https://alabamedic.com/",
+    "categoria": "filter-1"
+  },
+  {
+    "titulo": "Ateliers Leotteau",
+    "descripcion": "Portafolio web desarrollado para uno de mis clientes.",
+    "imagen": "img/img-ateliers_leotteau.png",
+    "tecnologias": [
+      "HTML",
+      "CSS",
+      "JS",
+      "BOOTSTRAP"
+    ],
+    "url": "https://26lunas.github.io/portafolio_Leotteau/",
+    "categoria": "filter-1"
+  },
+  {
+    "titulo": "Calculadora",
+    "descripcion": "Desarrollada en mis comienzos a modo de práctica, para mejorar mis habilidades de lógica en JavaScript.",
+    "imagen": "img/img-calculadora.png",
+    "tecnologias": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "url": "https://26lunas.github.io/Calculadora",
+    "categoria": "filter-1"
+  },
+  {
+    "titulo": "Web Prestige57",
+    "descripcion": "Portafolio web desarrollado para la Agencia Prestige57.",
+    "imagen": "img/img-prestige57.png",
+    "tecnologias": [
+      "HTML",
+      "CSS",
+      "JS",
+      "BOOTSTRAP"
+    ],
+    "url": "https://prestige57.com/",
+    "categoria": "filter-1"
+  },
+  {
+    "titulo": "Web de doctor",
+    "descripcion": "Mantenimiento y mejoras, web del Dr. Yeisman Pineda. Desarrollado cuando laboré en la Agencia Prestige57.",
+    "imagen": "img/img-web-ginecólogo.png",
+    "tecnologias": [
+      "MVC",
+      "PHP",
+      "JS",
+      "CSS"
+    ],
+    "url": "http://ginecologoyeismanpineda.com/Login/Principal",
+    "categoria": "filter-2"
+  }
+]

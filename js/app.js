@@ -1,172 +1,152 @@
 
 $(document).ready(function() {
-    console.log("Jquery esta funcionando");
-  
+  console.log("Jquery esta funcionando");
+
+  // Cargar proyectos desde proyectos.json
+  fetch('proyectos.json')
+    .then(function(response) {
+      if (!response.ok) {
+        throw new Error('Error al cargar proyectos.json');
+      }
+      return response.json();
+    })
+    .then(function(proyectos) {
+      var contenedor = document.getElementById('contenedor-proyectos');
+      if (!contenedor) return;
+
+      proyectos.forEach(function(proyecto) {
+        var categoria = proyecto.categoria ? proyecto.categoria : 'filter-1';
+
+        var tecnologiasHTML = '';
+        if (Array.isArray(proyecto.tecnologias)) {
+          tecnologiasHTML = proyecto.tecnologias.map(function(tec) {
+            return '<li>' + tec + '</li>';
+          }).join('');
+        }
+
+        var tarjeta = document.createElement('div');
+        tarjeta.className = 'image ' + categoria;
+        tarjeta.setAttribute('data-aos', 'fade-up');
+        tarjeta.setAttribute('data-aos-duration', '1000');
+
+        tarjeta.innerHTML = ''
+          + '<div class="cont-img-decript">'
+          + '  <img class="img-proyecto" src="' + proyecto.imagen + '" alt="Proyecto">'
+          + '  <div class="cont-description desaparecer"'
+          + '       data-aos="flip-right"'
+          + '       data-aos-easing="ease-out-cubic"'
+          + '       data-aos-duration="2000">'
+          + '    <h5>' + proyecto.titulo + '</h5>'
+          + '    <p>' + proyecto.descripcion + '</p>'
+          + '    <div class="lenguajes-utilizados">'
+          + '      <ul>' + tecnologiasHTML + '</ul>'
+          + '    </div>'
+          + '    <div class="enlaces-sitio">'
+          + '      <a href="' + proyecto.url + '" target="_blank">'
+          + '        <i class="fa-solid fa-globe"></i>Visitar web'
+          + '      </a>'
+          + '    </div>'
+          + '  </div>'
+          + '</div>';
+
+        contenedor.appendChild(tarjeta);
+      });
+
+      // Hover genérico para todas las tarjetas
+      $(".cont-img-decript").hover(function () {
+        $(this).find(".cont-description").toggleClass("desaparecer");
+      });
+
+      // Refrescar AOS para los nuevos elementos
+      if (window.AOS && typeof window.AOS.refreshHard === 'function') {
+        window.AOS.refreshHard();
+      } else if (window.AOS && typeof window.AOS.refresh === 'function') {
+        window.AOS.refresh();
+      }
+    })
+    .catch(function(error) {
+      console.error(error);
+    });
+
   // Funcion de efecto scroll
+  let prevScrollpos = window.pageYOffset;
+  let visible = false;
+  let navbar = document.getElementById("navbarScroll");
 
-    // $(window).scroll(function(){
-    
-    //   let navbar = document.getElementById('navbarScroll');
+  window.addEventListener("scroll", function() {
+    let currentScrollPos = window.pageYOffset;
 
-    //   navbar.classList.toggle('navbarScroll',$(this).scrollTop() > 846);
-            
-    // })
+    if (prevScrollpos >= currentScrollPos) {
+      if (!visible) {
+        navbar.classList.add("navbarScroll");
+        visible = true;
+      }
+    } else {
+      if (visible) {
+        navbar.classList.remove("navbarScroll");
+        visible = false;
+      }
+    }
 
-    $(document).ready(function() {
-      $('#btn-mostrarADS').click();
+    prevScrollpos = currentScrollPos;
+
+    if (prevScrollpos <= 846) {
+      navbar.classList.remove("navbarScroll");
+    }
   });
 
-    
-    let prevScrollpos = window.pageYOffset;
-    let visible = false;
-    let navbar = document.getElementById("navbarScroll");
-
-    window.addEventListener("scroll", function() {
-      let currentScrollPos = window.pageYOffset;
-      
-
-      if (prevScrollpos >= currentScrollPos) {
-        // El usuario se está desplazando hacia arriba
-        if (!visible) {
-          // Mostrar la barra de navegación si estaba oculta
-          navbar.classList.add("navbarScroll");
-          visible = true;
-        }
-      } else {
-        // El usuario se está desplazando hacia abajo
-        if (visible) {
-          // Ocultar la barra de navegación si estaba visible
-          navbar.classList.remove("navbarScroll");
-          visible = false;
-        }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.getAttribute('id');
+      const menuLink = document.querySelectorAll(`.navbar a[href="#${id}"]`);
+      if (entry.isIntersecting) {
+        document.querySelector(".navbar a.activado").classList.remove("activado");
+        $(menuLink).addClass('activado');
       }
-
-      prevScrollpos = currentScrollPos;
-
-      if(prevScrollpos <=846){
-        navbar.classList.remove("navbarScroll");
-        
-      }
-
     });
+  }, { rootMargin: "-30% 0px -70% 0px" });
 
-    
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const id = entry.target.getAttribute('id');
-        // console.log(id);
-        const menuLink = document.querySelectorAll(`.navbar a[href="#${id}"]`);
-        // console.log(menuLink);
-        if(entry.isIntersecting){
-          document.querySelector(".navbar a.activado").classList.remove("activado");
-          // menuLink.classList.add('activado');
-          $(menuLink).addClass('activado')
-        }
-        
+  const navbarLink = document.querySelectorAll('.navbar a[href^="#"]');
+  navbarLink.forEach(link => {
+    const hash = link.getAttribute("href");
+    const target = document.querySelector(hash);
+    if (target) {
+      observer.observe(target);
+    }
+  });
 
-      })
-    }, {rootMargin: "-30% 0px -70% 0px" }
-    );
+  $('.btn-miWork').hover(function () {
+    let iconoFlecha = document.getElementById('iconoFlecha');
+    iconoFlecha.classList.toggle('rotar');
 
-    const navbarLink = document.querySelectorAll('.navbar a[href^="#"]');
-    // console.log(navbarLink);
-    navbarLink.forEach(navbarLink => {
-      const hash = navbarLink.getAttribute("href");
-      // console.log(hash)
-      const target = document.querySelector(hash);
-      // console.log(target)
-      if(target){
-        observer.observe(target);
-      }
-    })
+    let contTitle = document.getElementById('cont-title');
+    contTitle.classList.toggle('btn-miWork-hover');
+  });
 
-    $('.btn-miWork').hover(function () {
+  $('.buttons').click(function() {
+    $(this).addClass('active').siblings().removeClass('active');
 
-        let iconoFlecha = document.getElementById('iconoFlecha');
-        iconoFlecha.classList.toggle('rotar');
+    let filter = $(this).attr('data-filter');
 
-        let contTitle = document.getElementById('cont-title');
-        contTitle.classList.toggle('btn-miWork-hover');
+    if (filter == 'all') {
+      $('.image').show(400);
+    } else {
+      $('.image').not('.' + filter).hide(200);
+      $('.image').filter('.' + filter).show(400);
+    }
+    console.log(filter);
+  });
 
-    })
+  // Código de popup magnific (comentado)
+  // $('.gallery').magnificPopup({
+  //   delegate: 'a',
+  //   type: 'image',
+  //   gallery:{
+  //     enabled: true
+  //   }
+  // })
 
-    
-
-    $('.buttons').click(function(){
-
-      $(this).addClass('active').siblings().removeClass('active');
-      
-      let filter = $(this).attr('data-filter');
-
-      if(filter == 'all'){
-        $('.image').show(400);
-      }else{
-        $('.image').not('.'+filter).hide(200);
-        $('.image').filter('.'+filter).show(400);
-      }
-      console.log(filter)
-    })
-
-    // $('.gallery').magnificPopup({
-
-    //   delegate: 'a',
-    //   type: 'image',
-    //   gallery:{
-    //     enabled: true
-    //   }
-
-    // })
-   
-    $("#cont-img-description-1").hover(function(){
-      //console.log("hover...");
-      let contDescript = document.getElementById("cont-description");
-      contDescript.classList.toggle("desaparecer");
-      
-    })
-    $("#cont-img-description-2").hover(function(){
-      //console.log("hover...");
-      let contDescript = document.getElementById("cont-desciption-2");
-      contDescript.classList.toggle("desaparecer");
-      
-    })
-    $("#cont-img-description-3").hover(function(){
-      //console.log("hover...");
-      let contDescript = document.getElementById("cont-desciption-3");
-      contDescript.classList.toggle("desaparecer");
-      
-    })
-    $("#cont-img-description-4").hover(function(){
-      //console.log("hover...");
-      let contDescript = document.getElementById("cont-desciption-4");
-      contDescript.classList.toggle("desaparecer");
-      
-    });
-    $("#cont-img-description-5").hover(function(){
-      //console.log("hover...");
-      let contDescript = document.getElementById("cont-desciption-5");
-      contDescript.classList.toggle("desaparecer");
-      
-    })
-    $("#cont-img-description-6").hover(function(){
-      //console.log("hover...");
-      let contDescript = document.getElementById("cont-description-6");
-      contDescript.classList.toggle("desaparecer");
-      
-    })
-    $("#cont-img-description-7").hover(function(){
-      //console.log("hover...");
-      let contDescript = document.getElementById("cont-description-7");
-      contDescript.classList.toggle("desaparecer");
-      
-    })
-    $("#cont-img-description-8").hover(function(){
-      //console.log("hover...");
-      let contDescript = document.getElementById("cont-description-8");
-      contDescript.classList.toggle("desaparecer");
-      
-    })
-})
+});
 
 
 
