@@ -219,135 +219,94 @@ body{
 
 /* Skill */
 .skill{
-    /* border: solid 3px blue; */
     width: 50%;
-    height: 90%;
+    min-height: 280px;
 }
 .cont-interno{
     width: 100%;
     padding: 2%;
     border-radius: 18px;
-    
 }
-
-/* .cont-interno:hover{
-    box-shadow: var(--colorAzulOscuro) 1px 5px 10px;
-} */
-
 .cont-interno h3{
     text-align: center;
+    margin-bottom: 30px;
 }
-.cont-skills:not(:last-child){
-    margin-bottom: 25px;
-}
-.detalles{
+
+/* Habilidades flotantes con iconos */
+.habilidades-flotantes{
+    position: relative;
     width: 100%;
+    min-height: 220px;
+}
+
+.skill-item{
+    position: absolute;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
 }
-.menu-skill{
-    position: relative;
-    border: solid 1px var(--colorTitle);
-    border-radius: 20px;
+
+.skill-icon{
+    font-size: 3.2rem;
+    color: var(--colorTitle);
+    text-shadow: var(--colorAzulOscuro) 1px 3px 8px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    animation: flotar 4s ease-in-out infinite;
 }
-.menu-skill div{
-    position: relative;
-    width: 0;
-    height: 8px;
-    border-radius: 10px;
-    background: var(--colorTitle);
+
+.skill-name{
+    font-size: 0.7rem;
+    color: rgb(80, 79, 79);
+    white-space: nowrap;
 }
+
+.skill-item:hover .skill-icon{
+    animation-play-state: paused;
+    transform: scale(1.4);
+    color: var(--colorAzulOscuro);
+}
+
+/* Posiciones ordenadas en grid suave para cada icono */
+.habilidades-flotantes .skill-item:nth-child(1){ left: 8%; top: 15%; }
+.habilidades-flotantes .skill-item:nth-child(1) .skill-icon{ animation-delay: 0s; }
+.habilidades-flotantes .skill-item:nth-child(2){ left: 35%; top: 5%; }
+.habilidades-flotantes .skill-item:nth-child(2) .skill-icon{ animation-delay: 0.5s; }
+.habilidades-flotantes .skill-item:nth-child(3){ left: 62%; top: 12%; }
+.habilidades-flotantes .skill-item:nth-child(3) .skill-icon{ animation-delay: 1s; }
+.habilidades-flotantes .skill-item:nth-child(4){ left: 88%; top: 18%; }
+.habilidades-flotantes .skill-item:nth-child(4) .skill-icon{ animation-delay: 1.5s; }
+.habilidades-flotantes .skill-item:nth-child(5){ left: 12%; top: 58%; }
+.habilidades-flotantes .skill-item:nth-child(5) .skill-icon{ animation-delay: 2s; }
+.habilidades-flotantes .skill-item:nth-child(6){ left: 38%; top: 62%; }
+.habilidades-flotantes .skill-item:nth-child(6) .skill-icon{ animation-delay: 2.5s; }
+.habilidades-flotantes .skill-item:nth-child(7){ left: 64%; top: 58%; }
+.habilidades-flotantes .skill-item:nth-child(7) .skill-icon{ animation-delay: 3s; }
+.habilidades-flotantes .skill-item:nth-child(8){ left: 88%; top: 55%; }
+.habilidades-flotantes .skill-item:nth-child(8) .skill-icon{ animation-delay: 3.5s; }
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-8px) rotate(2deg); }
+    50% { transform: translateY(0) rotate(-1deg); }
+    75% { transform: translateY(-5px) rotate(1deg); }
+}
+
 @media (max-width: 588px) {
     .info-aboutme{
         width: 85%;
         margin-bottom: 2%;
-        
     }
     .skill{
         width: 85%;
     }
-}
-
-/* animation */
-#html-menu{
-    animation: html-barra 4s forwards;
-}
-@keyframes html-barra {
-    100%{
-        width: 90%;
+    .skill-icon{
+        font-size: 2.5rem;
+    }
+    .skill-name{
+        font-size: 0.6rem;
     }
 }
-
-
-#css-menu{
-    animation: css-barra 4s forwards;
-}
-@keyframes css-barra {
-    100%{
-        width: 75%;
-    }
-}
-
-
-#js-menu{
-    animation: js-barra 4s forwards;
-}
-@keyframes js-barra {
-    100%{
-        width: 60%;
-    }
-}
-
-
-#php-menu{
-    animation: php-barra 4s forwards;
-}
-@keyframes php-barra {
-    100%{
-        width: 65%;
-    }
-}
-
-
-#py-menu{
-    animation: py-barra 4s forwards;
-}
-@keyframes py-barra {
-    100%{
-        width: 60%;
-    }
-}
-
-#java-menu{
-    animation: java-barra 4s forwards;
-}
-@keyframes java-barra {
-    100%{
-        width: 60%;
-    }
-}
-
-#angular-menu{
-    animation: angular-barra 4s forwards;
-}
-@keyframes angular-barra {
-    100%{
-        width: 20%;
-    }
-}
-
-#ajax-menu{
-    animation: ajax-barra 4s forwards;
-}
-@keyframes ajax-barra {
-    100%{
-        width: 85%;
-    }
-}
-
-/* end animation */
-
 
 /* Fin Skill */
 
@@ -517,6 +476,7 @@ body{
 
 .form-contacto{
     /* border: solid 1px red; */
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -535,6 +495,15 @@ body{
 
 .form-contacto input:focus, .form-contacto textarea:focus{
     outline: none;
+}
+
+.form-honeypot{
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .form-contacto input, .form-contacto textarea{

@@ -150,26 +150,63 @@ $(document).ready(function() {
 
 
 
-// codigo para resetiar formulario
+// codigo para resetiar formulario + anti-spam y anti-palabras inapropiadas
 
 const $form = document.querySelector('#form');
 $form.addEventListener('submit', handleSumit);
 
+// Lista de palabras inapropiadas (insultos, groserías, obscenidades)
+const PALABRAS_BLOQUEADAS = [
+    'idiota', 'estupido', 'estúpido', 'imbecil', 'imbécil', 'tonto', 'pendejo', 'pendeja',
+    'puta', 'puto', 'mierda', 'carajo', 'coño', 'verga', 'chingar', 'chingada', 'chingado',
+    'cabron', 'cabrón', 'maricon', 'maricón', 'hijueputa', 'malparido', 'malparida',
+    'culero', 'culera', 'pendejada', 'mamón', 'mamona', 'güevón', 'guevon',
+    'gilipollas', 'cabron', 'joder', 'hostia', 'mierda', 'cojones', 'coño',
+    'fuck', 'shit', 'asshole', 'bitch', 'damn', 'dick', 'crap'
+];
+
+function contienePalabrasInapropiadas(texto) {
+    if (!texto || typeof texto !== 'string') return false;
+    const normalizado = texto.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    return PALABRAS_BLOQUEADAS.some(function(palabra) {
+        const p = palabra.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        const regex = new RegExp('\\b' + p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
+        return regex.test(normalizado);
+    });
+}
+
 async function handleSumit(event){
     event.preventDefault();
-    const form = new FormData(this);
-    const response = await fetch(this.action, {
-        method: this.method,
-        body: form,
+    var form = this;
+
+    // Anti-spam: honeypot (si lo llenó un bot, no enviar)
+    var honeypot = form.querySelector('.form-honeypot');
+    if (honeypot && honeypot.value && honeypot.value.trim() !== '') {
+        form.reset();
+        return;
+    }
+
+    // Anti-palabras inapropiadas
+    var nombre = (form.Nombre && form.Nombre.value) || '';
+    var mensaje = (form.Mensaje && form.Mensaje.value) || '';
+    if (contienePalabrasInapropiadas(nombre) || contienePalabrasInapropiadas(mensaje)) {
+        alert('Por favor, evita usar lenguaje ofensivo o inapropiado en tu mensaje.');
+        return;
+    }
+
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
         headers:{
             'Accept': 'application/json'
         }
-    })
+    });
     if (response.ok){
-        this.reset()
-        alert('Gracias por contactarme, te escribiré pronto!!')
+        form.reset();
+        alert('Gracias por contactarme, te escribiré pronto!!');
     }else{
-        alert('Ocurrio un error con el servidor, vuelva a intentarlo mas tarde')
+        alert('Ocurrió un error con el servidor, vuelve a intentarlo más tarde');
     }
 }
 
